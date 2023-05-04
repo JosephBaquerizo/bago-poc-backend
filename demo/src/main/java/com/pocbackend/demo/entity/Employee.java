@@ -18,7 +18,7 @@ public class Employee {
     private final String country;
     private final String agent;
     private final String status;
-    private final String activity;
+    private final int activity;
     private final boolean verified;
 
 }

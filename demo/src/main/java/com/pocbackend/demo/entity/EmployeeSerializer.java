@@ -18,7 +18,7 @@ public class EmployeeSerializer extends JsonSerializer<Employee> {
         jsonGenerator.writeStringField("country", employee.getCountry());
         jsonGenerator.writeStringField("agent", employee.getAgent());
         jsonGenerator.writeStringField("status", employee.getStatus());
-        jsonGenerator.writeStringField("activity", employee.getActivity());
+        jsonGenerator.writeStringField("activity", String.valueOf(employee.getActivity()));
         jsonGenerator.writeBooleanField("verified", employee.isVerified());
         jsonGenerator.writeEndObject();
     }

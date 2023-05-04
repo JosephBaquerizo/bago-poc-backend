@@ -21,7 +21,7 @@ public class EmployeeService {
                 "Ecuador",
                 "Diaz Luis",
                 "nuevo",
-                "",
+                80,
                 true
         );
         Employee emp2 = new Employee(
@@ -32,7 +32,7 @@ public class EmployeeService {
                 "Panama",
                 "Icaza Carlos",
                 "calificado",
-                "",
+                30,
                 false
         );
         Employee emp3 = new Employee(
@@ -43,7 +43,7 @@ public class EmployeeService {
                 "Eslovenia",
                 "Martinez Lionel",
                 "no calificado",
-                "",
+                10,
                 true
         );
         Employee emp4 = new Employee(
@@ -54,7 +54,7 @@ public class EmployeeService {
                 "Egipto",
                 "Santos Victor",
                 "renovado",
-                "",
+                80,
                 true
         );
         Employee emp5 = new Employee(
@@ -65,7 +65,7 @@ public class EmployeeService {
                 "Paraguay",
                 "Firminho Roberto",
                 "negociacion",
-                "",
+                90,
                 false
         );
         Employee emp6 = new Employee(
@@ -76,7 +76,7 @@ public class EmployeeService {
                 "Ecuador",
                 "Valarezo Esteban",
                 "nuevo",
-                "",
+                60,
                 false
         );
         Employee emp7 = new Employee(
@@ -87,7 +87,7 @@ public class EmployeeService {
                 "Bolivia",
                 "Estupinan Pervis",
                 "negociacion",
-                "",
+                40,
                 true
         );
         Employee emp8 = new Employee(
@@ -98,7 +98,7 @@ public class EmployeeService {
                 "Ecuador",
                 "Caicedo Moises",
                 "calificado",
-                "",
+                70,
                 true
         );
         Employee emp9 = new Employee(
@@ -109,7 +109,7 @@ public class EmployeeService {
                 "Paraguay",
                 "Royal Emerson",
                 "renovacion",
-                "",
+                70,
                 false
         );
         Employee emp10 = new Employee(
@@ -120,7 +120,7 @@ public class EmployeeService {
                 "Eslovenia",
                 "Nunez Darwin",
                 "calificado",
-                "",
+                50,
                 true
         );
         Employee emp11 = new Employee(
@@ -131,7 +131,7 @@ public class EmployeeService {
                 "Ecuador",
                 "Dias Ruben",
                 "no calificado",
-                "",
+                100,
                 false
         );
         Employee emp12 = new Employee(
@@ -142,7 +142,7 @@ public class EmployeeService {
                 "Bolivia",
                 "Torres Diego",
                 "nuevo",
-                "",
+                20,
                 true
         );
         return List.of(emp1, emp2, emp3, emp4, emp5, emp6, emp7, emp8, emp9, emp10, emp11, emp12);
