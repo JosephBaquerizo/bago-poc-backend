@@ -1,151 +1,102 @@
 package com.pocbackend.demo.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pocbackend.demo.entity.Employee;
 
+import com.pocbackend.demo.entity.EmployeeBirthday;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class EmployeeService {
 
-    public List<Employee> getEmployees() {
-        Employee emp1 = new Employee(
-                "Rodriguez Paz Carlos Alberto",
-                new Date(),
-                "crodriguez@mail.com",
-                "0979812738",
-                "Ecuador",
-                "Diaz Luis",
-                "nuevo",
-                80,
-                true
+    public List<Employee> getEmployees() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File("src/main/resources/employees.json");
+        Employee[] employees = mapper.readValue(file, Employee[].class);
+        return Arrays.asList(employees);
+    }
+
+    public List<EmployeeBirthday> getEmployeesBirthdays() {
+        EmployeeBirthday emp1 = new EmployeeBirthday(
+                "Romero Castro Juan Carlos",
+                "Mayo - 01",
+                "jromero@mail.com",
+                "0979837483"
         );
-        Employee emp2 = new Employee(
-                "Romero Intriago Esmeralda Rubi",
-                new Date(),
-                "eromero@mail.com",
-                "0988812738",
-                "Panama",
-                "Icaza Carlos",
-                "calificado",
-                30,
-                false
+        EmployeeBirthday emp2 = new EmployeeBirthday(
+                "Barcos Hernandez Sebastian Hernan",
+                "Mayo - 03",
+                "hbarcos@mail.com",
+                "0966557483"
         );
-        Employee emp3 = new Employee(
-                "Jaen Mendoza Juan Jose",
-                new Date(),
-                "jjaen@mail.com",
-                "0979810000",
-                "Eslovenia",
-                "Martinez Lionel",
-                "no calificado",
-                10,
-                true
+        EmployeeBirthday emp3 = new EmployeeBirthday(
+                "Acai Intriago Janeth Bernardette",
+                "Mayo - 05",
+                "jacai@mail.com",
+                "0978926827"
         );
-        Employee emp4 = new Employee(
-                "Spencer Garcia Andres Jose",
-                new Date(),
-                "aspencer@mail.com",
-                "0955446738",
-                "Egipto",
-                "Santos Victor",
-                "renovado",
-                80,
-                true
+        EmployeeBirthday emp4 = new EmployeeBirthday(
+                "Lavezzi Ramos Sergio Andres",
+                "Mayo - 08",
+                "slavezzi@mail.com",
+                "0992837463"
         );
-        Employee emp5 = new Employee(
-                "Echeverria Sion Samir Alexander",
-                new Date(),
-                "secheverria@mail.com",
-                "0900088755",
-                "Paraguay",
-                "Firminho Roberto",
-                "negociacion",
-                90,
-                false
+        EmployeeBirthday emp5 = new EmployeeBirthday(
+                "Pernambucano Santos Roberto Carlos",
+                "Mayo - 10",
+                "rpernambucano@mail.com",
+                "0909182736"
         );
-        Employee emp6 = new Employee(
-                "Toral Jere Carla Alejandra",
-                new Date(),
-                "ctoral@mail.com",
-                "0911111711",
-                "Ecuador",
-                "Valarezo Esteban",
-                "nuevo",
-                60,
-                false
+        EmployeeBirthday emp6 = new EmployeeBirthday(
+                "Roque Varas Lucia Maria",
+                "Mayo - 15",
+                "lroque@mail.com",
+                "0944444832"
         );
-        Employee emp7 = new Employee(
-                "Toledo Rescalvo Beyonce Maria",
-                new Date(),
-                "btoledo@mail.com",
-                "0933312722",
-                "Bolivia",
-                "Estupinan Pervis",
-                "negociacion",
-                40,
-                true
+        EmployeeBirthday emp7 = new EmployeeBirthday(
+                "William Sada Venus Roberta",
+                "Mayo - 16",
+                "vwilliam@mail.com",
+                "0910928732"
         );
-        Employee emp8 = new Employee(
-                "Dzeko Murillo Mauro Ricardo",
-                new Date(),
-                "mdzeko@mail.com",
-                "0979855667",
-                "Ecuador",
-                "Caicedo Moises",
-                "calificado",
-                70,
-                true
+        EmployeeBirthday emp8 = new EmployeeBirthday(
+                "Icaza Gonzalez Fausto Jose",
+                "Mayo - 17",
+                "ficaza@mail.com",
+                "0979837483"
         );
-        Employee emp9 = new Employee(
-                "Correa Delgado Ericka Josefina",
-                new Date(),
-                "ecorrea@mail.com",
-                "09798132897",
-                "Paraguay",
-                "Royal Emerson",
-                "renovacion",
-                70,
-                false
+        EmployeeBirthday emp9 = new EmployeeBirthday(
+                "Sampietro Kendo Mario Luigi",
+                "Mayo - 20",
+                "msampietro@mail.com",
+                "0910982298"
         );
-        Employee emp10 = new Employee(
-                "Marquez Orrantia Maria Jose",
-                new Date(),
-                "mmarquez@mail.com",
-                "0979811223",
-                "Eslovenia",
-                "Nunez Darwin",
-                "calificado",
-                50,
-                true
+        EmployeeBirthday emp10 = new EmployeeBirthday(
+                "Benavides Otora Claudia Maria",
+                "Mayo - 23",
+                "cbenavides@mail.com",
+                "0979855566"
         );
-        Employee emp11 = new Employee(
-                "Jimenez Baquero Saul Alberto",
-                new Date(),
-                "sjimenez@mail.com",
-                "0979833447",
-                "Ecuador",
-                "Dias Ruben",
-                "no calificado",
-                100,
-                false
+        EmployeeBirthday emp11 = new EmployeeBirthday(
+                "Davila Romo Guillermo Carlos",
+                "Mayo - 25",
+                "gdavila@mail.com",
+                "0911029375"
         );
-        Employee emp12 = new Employee(
-                "Nesta Guedes Gonzalo Bruno",
-                new Date(),
-                "gnesta@mail.com",
-                "0979845678",
-                "Bolivia",
-                "Torres Diego",
-                "nuevo",
-                20,
-                true
+        EmployeeBirthday emp12 = new EmployeeBirthday(
+                "Infante Bage Geoconda Josefa",
+                "Mayo - 28",
+                "ginfante@mail.com",
+                "0979837345"
         );
-        return List.of(emp1, emp2, emp3, emp4, emp5, emp6, emp7, emp8, emp9, emp10, emp11, emp12);
+        return Arrays.asList(emp1, emp2, emp3, emp4, emp5, emp6, emp7, emp8, emp9, emp10, emp11, emp12);
     }
 
 }
