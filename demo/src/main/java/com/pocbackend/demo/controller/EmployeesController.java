@@ -6,15 +6,14 @@ import com.pocbackend.demo.service.EmployeeService;
 import lombok.AllArgsConstructor;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/employees")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = { RequestMethod.GET })
 @AllArgsConstructor
 public class EmployeesController {
 
@@ -26,7 +25,7 @@ public class EmployeesController {
     }
 
     @GetMapping("/birthdays")
-    public ResponseEntity<List<EmployeeBirthday>> getEmployeesBirthdays() {
+    public ResponseEntity<List<EmployeeBirthday>> getEmployeesBirthdays() throws IOException {
         return ResponseEntity.ok(employeeService.getEmployeesBirthdays());
     }
 
